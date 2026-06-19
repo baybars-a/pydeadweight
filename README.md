@@ -41,11 +41,29 @@ than to confidently flag a needed package for deletion.
 
 ## Install
 
+Install the latest release straight from GitHub:
+
 ```console
-$ pip install pydeadweight        # once published
-# or, from a checkout:
+$ pip install "git+https://github.com/baybarsbaha/pydeadweight.git"
+```
+
+Or pin a specific tag:
+
+```console
+$ pip install "pydeadweight @ git+https://github.com/baybarsbaha/pydeadweight.git@v1.0.0"
+```
+
+Or, from a local checkout (editable, for development):
+
+```console
+$ git clone https://github.com/baybarsbaha/pydeadweight.git
+$ cd pydeadweight
 $ pip install -e .
 ```
+
+> On Windows, if the `pydeadweight` command isn't found after install, the
+> Scripts directory may not be on your `PATH`. Either add it, or run the tool as
+> a module: `python -m pydeadweight.cli check`.
 
 Python 3.11+ required. The tool keeps its own dependency list short — `packaging`,
 `tomlkit`, `pathspec`, and the standard library.
