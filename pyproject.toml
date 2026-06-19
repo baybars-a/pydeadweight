@@ -30,9 +30,9 @@ dev = ["pytest>=7.0"]
 pydeadweight = "pydeadweight.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/baybarsbaha/pydeadweight"
-Repository = "https://github.com/baybarsbaha/pydeadweight"
-Issues = "https://github.com/baybarsbaha/pydeadweight/issues"
+Homepage = "https://github.com/baybars-a/pydeadweight"
+Repository = "https://github.com/baybars-a/pydeadweight"
+Issues = "https://github.com/baybars-a/pydeadweight/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["pydeadweight"]

@@ -44,19 +44,19 @@ than to confidently flag a needed package for deletion.
 Install the latest release straight from GitHub:
 
 ```console
-$ pip install "git+https://github.com/baybarsbaha/pydeadweight.git"
+$ pip install "git+https://github.com/baybars-a/pydeadweight.git"
 ```
 
 Or pin a specific tag:
 
 ```console
-$ pip install "pydeadweight @ git+https://github.com/baybarsbaha/pydeadweight.git@v1.0.0"
+$ pip install "pydeadweight @ git+https://github.com/baybars-a/pydeadweight.git@v1.0.0"
 ```
 
 Or, from a local checkout (editable, for development):
 
 ```console
-$ git clone https://github.com/baybarsbaha/pydeadweight.git
+$ git clone https://github.com/baybars-a/pydeadweight.git
 $ cd pydeadweight
 $ pip install -e .
 ```
