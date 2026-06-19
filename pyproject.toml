@@ -1,0 +1,41 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pydeadweight"
+version = "1.0.0"
+description = "Detect and remove unused Python dependencies from a project's manifest."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "pydeadweight contributors" }]
+keywords = ["dependencies", "static-analysis", "pyproject", "cleanup"]
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Quality Assurance",
+]
+dependencies = [
+    "packaging>=23.0",
+    "tomlkit>=0.12",
+    "pathspec>=0.11",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+pydeadweight = "pydeadweight.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/example/pydeadweight"
+
+[tool.hatch.build.targets.wheel]
+packages = ["pydeadweight"]
+
+[tool.pydeadweight]
+# pydeadweight analyzing itself: tomlkit/pathspec are imported in source,
+# packaging too. Nothing runtime-only here, but this shows the config shape.
+exclude = ["tests/fixtures/**"]
